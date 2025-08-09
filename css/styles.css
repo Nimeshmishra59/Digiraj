@@ -1,0 +1,45 @@
+/* styles.css - clean modern responsive layout matching the business card colors */
+:root{
+  --accent:#f08a00;
+  --dark:#111;
+  --muted:#777;
+  --bg:#fffaf6;
+  --container:1100px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--dark); background:var(--bg); line-height:1.5}
+.container{max-width:var(--container); margin:0 auto; padding:1.25rem}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.logo{height:56px; display:block; border-radius:6px; object-fit:cover}
+.nav{display:flex; gap:1rem; align-items:center}
+.nav a{text-decoration:none; color:var(--dark); font-weight:600}
+.btn-contact{background:var(--accent); color:#fff; padding:.5rem .8rem; border-radius:8px}
+.nav-toggle{display:none; background:none; border:0; font-size:1.4rem}
+.hero{padding:3rem 0; text-align:center}
+.hero h1{font-size:1.9rem; margin:.25rem 0}
+.hero .lead{color:var(--muted); margin-bottom:1rem}
+.accent{color:var(--accent); font-weight:700}
+.btn{background:var(--dark); color:#fff; padding:.6rem 1rem; border-radius:10px; text-decoration:none; margin-right:.5rem; display:inline-block}
+.btn-outline{background:transparent; color:var(--dark); border:2px solid var(--dark)}
+.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:2rem}
+.services-preview .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem}
+.card{background:#fff; padding:1rem; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.contact-cta{background:#fff; padding:1.5rem; text-align:center; margin:2rem 0; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.site-footer{background:transparent; padding:1rem 0; color:var(--muted); margin-top:2rem}
+.service-list{list-style:none; padding:0}
+.service-list li{background:#fff; margin:0.6rem 0; padding:0.9rem; border-radius:8px}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.8rem; margin-top:1rem}
+.thumb{background:#fff; min-height:120px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--muted)}
+
+.contact-page form{display:grid; gap:.6rem; max-width:520px}
+.contact-page input,.contact-page textarea{padding:.6rem; border-radius:8px; border:1px solid #e6e6e6}
+
+@media (max-width:800px){
+  .nav{display:none; position:absolute; right:1rem; top:76px; background:#fff; box-shadow:0 8px 20px rgba(0,0,0,.08); padding:1rem; border-radius:10px; flex-direction:column}
+  .nav-toggle{display:block}
+  .header-inner{align-items:center}
+  .logo{height:48px}
+  .hero h1{font-size:1.4rem}
+}
+.sr-only{position:absolute; left:-9999px}
